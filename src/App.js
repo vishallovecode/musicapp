@@ -1,25 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
 
+import CustomAvatar from './library/components/Avatar';
+import Input from './library/components/input';
+import Header from './library/components/header';
+
 function App() {
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>My music App</h2>
+      <CustomAvatar/>
+      <Input/>
+      <Header/>
     </div>
   );
 }
 
 export default App;
+
+
+// display 
+// container 
