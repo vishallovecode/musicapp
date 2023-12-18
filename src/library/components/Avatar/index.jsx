@@ -2,8 +2,6 @@ import { useState } from "react";
 
 import Avatar from '@mui/material/Avatar';
 
-import PersonIcon from '@mui/icons-material/Person';
-
 
 const CustomAvatar = (props) => {
         const {image , text} = props; // the type of pr<ops is always object

@@ -1,19 +1,34 @@
-import HomeIcon from '@mui/icons-material/Home';
-import FeedIcon from '@mui/icons-material/Feed';
-import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
-import List from '../list';
+import HomeIcon from "@mui/icons-material/Home";
+import FeedIcon from "@mui/icons-material/Feed";
+import LibraryMusicIcon from "@mui/icons-material/LibraryMusic";
+import List from "../list";
+import Input from "../input";
+import CustomAvatar from "../Avatar";
+import './header.css'
 
+const nav_data = [
+  { Icon: <HomeIcon />, text: "Home" },
+  { Icon: <FeedIcon />, text: "Social" },
+  { Icon: <LibraryMusicIcon />, text: "Library" },
+];
 
-const nav_data = [ {Icon: <HomeIcon/> , text: 'Home'} , {Icon: <FeedIcon/>  , text: 'Social'} , {Icon: <LibraryMusicIcon/> , text: 'Library'}]
+const Header = (props) => {
+  return (
+    <div className="flex justify-between header">
+      <div>
+      Bajate Raho
+      </div>
+      {nav_data.map((item) => {
+        // return <List  item = {item}/>
+        return (
+          <List item ={item}/>
+        );
+      })}
 
-const Header = (props)=> {
-    return  (
-        <div className="flex ">
-            {nav_data.map((item)=>{
-                return <List  item = {item}/>
-            })}
-        </div>
-    )
-}
+      <Input  placeholder ='Search here..'/>
+      <CustomAvatar />
+    </div>
+  );
+};
 
-export default  Header;
+export default Header;

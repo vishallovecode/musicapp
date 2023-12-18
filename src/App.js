@@ -9,9 +9,6 @@ function App() {
 
   return (
     <div className="App">
-      <h2>My music App</h2>
-      <CustomAvatar/>
-      <Input/>
       <Header/>
     </div>
   );
