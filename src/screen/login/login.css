@@ -1,0 +1,13 @@
+.login {
+    justify-content: center;
+    flex-direction: column;
+    gap: 25px;
+    width: 25%;
+    align-items: center;
+    margin: auto;
+    padding: 200px;
+}
+
+.login-input {
+    width: 100%;
+}
