@@ -13,3 +13,8 @@ export default Input;
 // const a = `Here ${b}`
 
 // a => Here vishal
+
+
+// async await 
+// calling api 
+// promises

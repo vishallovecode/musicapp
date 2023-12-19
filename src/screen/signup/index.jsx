@@ -10,7 +10,7 @@ const SignUp = () => {
        name: '' ,
        email: '', 
        password: '',
- 
+       "appType" : "music"
     })
 
 
@@ -22,7 +22,7 @@ const SignUp = () => {
     const handleContinue= async()=> {
         const options = {
             method: 'POST',
-            headers: new Headers({projectID:'pawxm68lskm5'}),
+            headers: new Headers({projectID:'9fc41adjs85k' , 'Content-Type': 'application/json'} ),
             body: JSON.stringify(signUpData)
         }
         const res = await fetch('https://academics.newtonschool.co/api/v1/user/signup' ,options);
