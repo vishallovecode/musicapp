@@ -2,7 +2,7 @@ import { Button } from "@mui/material";
 import Input from "../../library/components/input";
 import  './login.css'
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Login = () => {
   const navigate = useNavigate();
@@ -31,11 +31,18 @@ const Login = () => {
     const resJson = await res.json();
     localStorage.setItem('token' , resJson.token)
     navigate('/')
-
 }
+
+useEffect(()=>{
+  const token = localStorage.getItem('token')
+  if(token) {
+    navigate('/')
+  }
+} , [])
+
   return (
     <div className="flex login">
-        <h3 style= {{color:'white'}}>Login</h3>
+      <h3 style= {{color:'white'}}>Login</h3>
       <Input onChange= {handleChange} name= 'email' placeholder = 'Enter Email' type= 'email' classes = 'login-input'/>
       <Input  onChange= {handleChange} name = 'password' placeholder ='Enter Password' type= 'password' classes = 'login-input'/>
       <Button onClick= {handleContinue} variant="contained">Login</Button>

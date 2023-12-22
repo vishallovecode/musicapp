@@ -7,9 +7,9 @@ import CustomAvatar from "../Avatar";
 import './header.css'
 
 const nav_data = [
-  { Icon: <HomeIcon />, text: "Home" },
-  { Icon: <FeedIcon />, text: "Social" },
-  { Icon: <LibraryMusicIcon />, text: "Library" },
+  { Icon: <HomeIcon />, text: "Home" , to :'/' },
+  { Icon: <FeedIcon />, text: "Social" , to: '/social' },
+  { Icon: <LibraryMusicIcon />, text: "Library"  , to: 'library'},
 ];
 
 const Header = (props) => {

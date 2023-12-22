@@ -1,11 +1,12 @@
 import { Button } from "@mui/material";
 import Input from "../../library/components/input";
 
-import { Link } from "react-router-dom";
-import { useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const SignUp = () => {
 
+  const navigate =  useNavigate();
     const  [signUpData , setSignUpData] = useState({
        name: '' ,
        email: '', 
@@ -28,8 +29,16 @@ const SignUp = () => {
         const res = await fetch('https://academics.newtonschool.co/api/v1/user/signup' ,options);
         const resJson = await res.json();
         localStorage.setItem('token' , resJson.token)
-        console.log(resJson , 'signup')
+        navigate('/')
     }
+
+     useEffect(()=>{
+          const token = localStorage.getItem('token')
+          if(token) {
+            navigate('/')
+          }
+     } , [])
+     
   return (
     <div className="flex login">
         <h3 style= {{color:'white'}}>Sign Up</h3>
