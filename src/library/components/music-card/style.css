@@ -1,8 +1,8 @@
 .card-container {
     max-width: 250px;
     min-width: 250px;
-    max-height: 250px;
-    min-height: 250px;
+    max-height: 350px;
+    min-height: 350px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,7 +21,7 @@
     color: white;
 }
 img {
-    height:90%;
+    height:70%;
     width: 100%;
     border-radius: 20px;
 }

@@ -1,10 +1,12 @@
 import './style.css'
-const MusicCard =()=>{
+const MusicCard =(props)=>{
+    //props => {item: object}
+    const {title , thumbnail , artist}= props.item;
     return  (
         <div className="card-container">
-            <img src='https://newton-project-resume-backend.s3.amazonaws.com/thumbnail/64cf94e447ae38c3e33a7253.jpg'/>
-            <span className='title'>Story-10 S3 Beemar</span>
-            <span className='artist'>Ashish Vidyarthi</span>
+            <img src={thumbnail}/>
+            <span className='title'>{title}</span>
+            <span className='artist'>{artist?.[0]?.name}</span>
         </div>
     )
 }

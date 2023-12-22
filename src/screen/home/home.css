@@ -40,6 +40,11 @@
 
   .home {
     display: flex;
-    gap: 10px;
+    gap: 20px;
+    height: 100%;
+    background-color: #414141;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
   }

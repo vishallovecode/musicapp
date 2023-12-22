@@ -28,6 +28,8 @@ const Home = ()=>{
 
     // }
 
+    const[musicList , setMusicList]= useState([])
+
     const getMusicList = async()=>{
             // here  i will call the api and wait for the result 
             // waiting result we can use await keyword
@@ -43,8 +45,9 @@ const Home = ()=>{
            // here data will be not in JSON format fetch does not return the data or result in json format
            // we have to convert that whole data whatever fetch is returining in json format 
            // converting fetch result into json we have a function call json()  this also return the promises
-           const dataJson = await data.json();
-           console.log('musicList' , dataJson)
+           const resJson = await data.json();
+           setMusicList(resJson.data)
+      
     }
 
 
@@ -58,12 +61,22 @@ const Home = ()=>{
         // the inside useEffect runs only once at the time of load or first render if we pass dependecny as a empty array
     },[])
 
+    // if you want to write javascript inside jsx you have to always use curly braces and write code there
     return (
-        <div> 
-        <h2>Hey This is home</h2>
-        <MusicCard/>
+        <div className="home  "> 
+        {musicList?.map((item)=>{
+        return   <MusicCard item ={item}/>  
+        }) }
         </div>
     )
 }
 
 export default Home;
+
+// const data = [1,2,3,4,5].map((elem, index)=>{
+//     return elem*2
+// })
+
+// [1, 4 , 6 , 8, 10]
+
+// js array map function return the value for all the elements 
