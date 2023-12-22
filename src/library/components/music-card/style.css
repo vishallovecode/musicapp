@@ -1,0 +1,27 @@
+.card-container {
+    max-width: 250px;
+    min-width: 250px;
+    max-height: 250px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    font-weight: 600;
+    color: white;
+    font-size: 20px;
+}
+
+.artist {
+    font-weight: 300;
+    font-size: 14px;
+    color: white;
+}
+img {
+    height:90%;
+    width: 100%;
+    border-radius: 20px;
+}

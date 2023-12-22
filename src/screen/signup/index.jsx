@@ -27,6 +27,7 @@ const SignUp = () => {
         }
         const res = await fetch('https://academics.newtonschool.co/api/v1/user/signup' ,options);
         const resJson = await res.json();
+        localStorage.setItem('token' , resJson.token)
         console.log(resJson , 'signup')
     }
   return (
